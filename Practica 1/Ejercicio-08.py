@@ -1,77 +1,90 @@
-"""FOR, Sum, Reduce."""
+"""Any y Sets."""
+
+from typing import Any, Iterable
 
 
-def sumatoria_basico(n: int) -> int:
-    """Devuelve la suma de los números de 1 a N.
-    Restricción: Utilizar un bucle for.
+def superposicion_basico(lista_1: Iterable[Any], lista_2: Iterable[Any]) -> bool:
+    """Toma dos listas y devuelve un booleano en base a si tienen al menos 1
+    elemento en común.
+    Restricción: Utilizar bucles anidados.
     """
     pass # Completar
 
-    m=0
-    for i in range(n + 1):
-        m = m + i
-    return m
+    for l1 in lista_1:
+        for l2 in lista_2:
+            if l1 == l2:
+                return True
+    return False
 
 
 # NO MODIFICAR - INICIO
-assert sumatoria_basico(1) == 1
-assert sumatoria_basico(100) == 5050
+test_list = [1, "hello", 35.20]
+assert superposicion_basico(test_list, (2, "world", 35.20))
+assert not superposicion_basico(test_list, (2, "world", 30.85))
 # NO MODIFICAR - FIN
 
 
 ###############################################################################
 
 
-def sumatoria_sum(n: int) -> int:
-    """Re-Escribir utilizando la función sum y sin usar bucles.
-    Referencia: https://docs.python.org/3/library/functions.html#sum
+def superposicion_in(lista_1: Iterable[Any], lista_2: Iterable[Any]) -> bool:
+    """Re-Escribir utilizando un sólo bucle y el operador IN."""
+    pass # Completar
+
+    for l1 in lista_1:
+        if l1 in (lista_2):
+            return True
+    return False
+
+
+# NO MODIFICAR - INICIO
+test_list = [1, "hello", 35.20]
+assert superposicion_in(test_list, (2, "world", 35.20))
+assert not superposicion_in(test_list, (2, "world", 30.85))
+# NO MODIFICAR - FIN
+
+
+###############################################################################
+
+
+def superposicion_any(lista_1: Iterable[Any], lista_2: Iterable[Any]) -> bool:
+    """Re-Escribir utilizando sin bucles, el operador in y la funcion any.
+    Referencia: https://docs.python.org/3/library/functions.html#any
     """
     pass # Completar
 
-    return sum(range(n+1),0)
+    return any(map(lambda x: x in lista_2, lista_1))
+
+
+# NO MODIFICAR - INICIO
+test_list = [1, "hello", 35.20]
+assert superposicion_any(test_list, (2, "world", 35.20))
+assert not superposicion_any(test_list, (2, "world", 30.85))
+# NO MODIFICAR - FIN
+
+
+###############################################################################
+
+
+def superposicion_set(lista_1: Iterable[Any], lista_2: Iterable[Any]) -> bool:
+    """Re-Escribir utilizando conjuntos (sets).
+    Referencia: https://docs.python.org/3/library/stdtypes.html#set-types-set-frozenset
+    """
+    pass # Completar
+
+    set_1 = set(lista_1)
+    set_2 = set(lista_2)
+    return bool(set_1 & set_2)
+
+    """Primero, convertimos las dos listas en conjuntos usando la función set. 
+    Luego, utilizamos la operación de intersección & para obtener un conjunto 
+    que contiene los elementos que están presentes en ambos conjuntos. 
+    Finalmente, convertimos el conjunto resultante en un valor booleano utilizando la función bool. 
+    Devuelve True si el conjunto no está vacío (es decir, si hay elementos en común), y False en caso contrario."""
     
-# NO MODIFICAR - INICIO
-assert sumatoria_sum(1) == 1
-assert sumatoria_sum(100) == 5050
-# NO MODIFICAR - FIN
-
-
-###############################################################################
-
-
-from functools import reduce
-
-
-def sumatoria_reduce(n: int) -> int:
-    """CHALLENGE OPCIONAL: Re-escribir utilizando reduce.
-    Referencia: https://docs.python.org/3/library/functools.html#functools.reduce
-    """
-    pass # Completar
-
-    return reduce(lambda x,y: x + y, range(n + 1))
-
 
 # NO MODIFICAR - INICIO
-if __name__ == "__main__":
-    assert sumatoria_reduce(1) == 1
-    assert sumatoria_reduce(100) == 5050
-# NO MODIFICAR - FIN
-
-
-###############################################################################
-
-
-def sumatoria_gauss(n: int) -> int:
-    """CHALLENGE OPCIONAL: Re-Escribir utilizando suma de Gauss.
-    Referencia: https://es.wikipedia.org/wiki/1_%2B_2_%2B_3_%2B_4_%2B_%E2%8B%AF
-    """
-    pass # Completar
-
-    return ((n*(n+1))/2)
-
-
-# NO MODIFICAR - INICIO
-if __name__ == "__main__":
-    assert sumatoria_gauss(1) == 1
-    assert sumatoria_gauss(100) == 5050
+test_list = [1, "hello", 35.20]
+assert superposicion_set(test_list, (2, "world", 35.20))
+assert not superposicion_set(test_list, (2, "world", 30.85))
 # NO MODIFICAR - FIN
