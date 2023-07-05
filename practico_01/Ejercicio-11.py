@@ -2,23 +2,22 @@
 
 from typing import Iterable
 
-
 def suma_cubo_pares_for(numeros: Iterable[int]) -> int:
     """Toma una lista de números, los eleva al cubo, y devuelve la suma de
     los elementos pares.
     Restricción: Utilizar dos bucles for, uno para elevar al cubo y otro para
     separar los pares.
     """
-    pass # Completar
-
-    #numeros = map(lambda x: x * x * x, numeros) otra forma:
+    
+    
+    # Completar
+    # numeros = map(lambda x: x * x * x, numeros) otra forma:
     sum = 0
     for n in numeros:
         if (n**3) % 2 == 0:
             sum += (n * n * n)
     return sum
             
-
 
 # NO MODIFICAR - INICIO
 assert suma_cubo_pares_for([1, 2, 3, 4, 5, 6]) == 288 

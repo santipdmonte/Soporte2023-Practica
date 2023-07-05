@@ -4,20 +4,19 @@ base de datos y se quieren combinar estas listas para que luego puedan crearse
 los objetos de la capa de negocio.
 """
 
-
 from typing import Any, List, Tuple
 
 nombre_articulos = ["ventana", "lámpara", "shampoo"]
 precio_articulos = [100.48, 16.42, 5.20]
-
 
 def combinar_basico(nombres: List[str], precios: List[float]) -> Tuple[Any]:
     """Toma dos listas y devuelve una tupla de duplas con los componentes de
     las listas.
     Restricción: Resolver utilizando un bucle for.
     """
-    pass # Completar
-
+    
+    
+    # Completar
     resp = []
     for n in range(len(nombre_articulos)):
         resp.append(((nombre_articulos[n]),(precio_articulos[n])))
@@ -37,9 +36,7 @@ assert combinar_basico(nombre_articulos, precio_articulos) == respuesta
 
 ###############################################################################
 
-
 id_articulos = [6852, 1459, 3578]
-
 
 def combinar_enumerate(nombres: List[str], precios: List[float], ids: List[int]) -> Tuple[Any]:
     """Re-Escribir utilizando enumerate y agregando un nuevo componente.

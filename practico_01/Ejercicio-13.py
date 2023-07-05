@@ -69,35 +69,34 @@ assert next(generador_pares) == 4
 
 ###############################################################################
 
+# def generar_pares_generator_send(initial: int = 0) -> Iterator[int]:
+#     """CHALLENGE OPCIONAL: Re-Escribir utilizando send para saltear numeros"""
 
-rghjbkv=8sdcjkv0=hjolhola como t aio[v=v[v]]v]keoonoo0000000000000000000000000000000gjkjkgjk,ggjk,gjk,jk,gjjjlGJGJGJGJGJGJGJGJGJGJGJLKoi;i;oipo9ok.jk.yio;;o;o;oooooooouiiiiiii;''''';; ;'';;""
-
-
-# NO MODIFICAR - INICIO
-if __name__ == "__main__":
-    generador_pares = generar_pares_generator_send()
-    assert next(generador_pares) == 0
-    assert next(generador_pares) == 2
-    assert next(generador_pares) == 4
-    assert generador_pares.send(10) == 10
-    assert next(generador_pares) == 12
-    assert next(generador_pares) == 14
-    assert next(generador_pares) == 16
-# NO MODIFICAR - FIN
+# # NO MODIFICAR - INICIO
+# if __name__ == "__main__":
+#     generador_pares = generar_pares_generator_send()
+#     assert next(generador_pares) == 0
+#     assert next(generador_pares) == 2
+#     assert next(generador_pares) == 4
+#     assert generador_pares.send(10) == 10
+#     assert next(generador_pares) == 12
+#     assert next(generador_pares) == 14
+#     assert next(generador_pares) == 16
+# # NO MODIFICAR - FIN
 
 
 ###############################################################################
 
 
-def generar_pares_delegados(initial: int = 0) -> Iterator[int]:
-    """CHALLENGE OPCIONAL: Re-Escribir utilizando Generadores delegados (yield from)"""
-    pass # Completar
+# def generar_pares_delegados(initial: int = 0) -> Iterator[int]:
+#     """CHALLENGE OPCIONAL: Re-Escribir utilizando Generadores delegados (yield from)"""
+#     pass # Completar
 
 
-# NO MODIFICAR - INICIO
-if __name__ == "__main__":
-    generador_pares = generar_pares_delegados()
-    assert next(generador_pares) == 0
-    assert next(generador_pares) == 2
-    assert next(generador_pares) == 4
-# NO MODIFICAR - FIN
+# # NO MODIFICAR - INICIO
+# if __name__ == "__main__":
+#     generador_pares = generar_pares_delegados()
+#     assert next(generador_pares) == 0
+#     assert next(generador_pares) == 2
+#     assert next(generador_pares) == 4
+# # NO MODIFICAR - FIN
