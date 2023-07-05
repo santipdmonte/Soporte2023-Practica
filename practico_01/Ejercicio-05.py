@@ -8,17 +8,15 @@ def multiplicar_basico(numeros: Iterable[float]) -> float:
     la lista está vacia debe devolver 0.
     Restricciones: No usar bibliotecas auxiliares (Numpy, math, pandas).
     """
-    pass # Completar
-
+    
+    
+    # Completar
+    if len(numeros) == 0:
+        return 0 
     j = 1
     for i in numeros:
         j = j * i
-
-    if (len(numeros) == 0):
-        j = 0 
-
     return j
-
 
 
 # NO MODIFICAR - INICIO
@@ -35,19 +33,16 @@ assert multiplicar_basico(range(1, 20)) == 121_645_100_408_832_000
 
 from functools import reduce
 
-
 def multiplicar_reduce(numeros: Iterable[float]) -> float:
     """CHALLENGE OPCIONAL - Re-escribir utilizando reduce.
     Referencia: https://docs.python.org/3.8/library/functools.html#functools.reduce
     """
-    pass # Completar
-
-    try: return reduce(lambda x,y: x*y,numeros)
+    
+    
+    # Completar
+    try: return reduce(lambda x, y: x * y, numeros)
     except:
-        if (len(numeros) == 0):
-            return 0 
-
-    return resp
+        return 0   # Len(numeros = 0)
 
 
 # NO MODIFICAR - INICIO
